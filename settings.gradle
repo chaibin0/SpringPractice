@@ -1,0 +1,2 @@
+rootProject.name = 'springPracticeForJava'
+include 'spring-basic'
