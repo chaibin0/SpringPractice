@@ -1,0 +1,31 @@
+plugins {
+    id 'org.springframework.boot' version '2.7.1' apply false
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE' apply false
+    id 'java'
+}
+
+def subModuleProjects() {
+    return subprojects.findAll {
+        new File(it.projectDir, "src").exists()
+    }
+}
+
+configure(subModuleProjects()) {
+
+    apply plugin: 'java'
+
+    configurations {
+        compileOnly {
+            extendsFrom annotationProcessor
+        }
+    }
+
+    repositories {
+        mavenCentral()
+    }
+
+    tasks.named('test') {
+        useJUnitPlatform()
+    }
+}
+

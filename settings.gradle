@@ -1,2 +1,3 @@
 rootProject.name = 'springPracticeForJava'
 include 'spring-basic'
+include 'spring-jpa'

@@ -8,10 +8,10 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 
 @SpringBootApplication
 @ConfigurationPropertiesScan
-//@EnableConfigurationProperties(Test1Properties.class)
-public class SpringPracticeApplication {
+@EnableConfigurationProperties(Test1Properties.class)
+public class SpringBasicApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringPracticeApplication.class, args);
+        SpringApplication.run(SpringBasicApplication.class, args);
     }
 }
